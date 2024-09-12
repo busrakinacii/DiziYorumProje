@@ -8,13 +8,19 @@ using System.Web.UI.WebControls;
 
 namespace DiziYorumProje.AdminSayfalar
 {
-    public partial class Bloglar : System.Web.UI.Page
+    public partial class BlogSil : System.Web.UI.Page
     {
         BlogDiziEntities db = new BlogDiziEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Repeater1.DataSource = db.TBLBLOG.ToList();
-            Repeater1.DataBind();
+            int x = Convert.ToInt32(Request.QueryString["BLOGID"]);
+
+            var blog = db.TBLBLOG.Find(x);
+            db.TBLBLOG.Remove(blog);
+            db.SaveChanges();
+            Response.Redirect("Bloglar.Aspx");
+
+
         }
     }
 }

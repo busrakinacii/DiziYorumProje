@@ -76,6 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminSayfalar\Bloglar.aspx" />
+    <Content Include="AdminSayfalar\BlogSil.aspx" />
+    <Content Include="AdminSayfalar\YeniBlog.aspx" />
     <Content Include="BlogDetay.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Entity\Model1.Context.tt">
@@ -90,6 +92,7 @@
     </Content>
     <Content Include="Hakkimda.aspx" />
     <Content Include="Iletisim.aspx" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
     <Content Include="web\about.html" />
     <Content Include="web\contact.html" />
@@ -126,6 +129,20 @@
     </Compile>
     <Compile Include="AdminSayfalar\Bloglar.aspx.designer.cs">
       <DependentUpon>Bloglar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSayfalar\BlogSil.aspx.cs">
+      <DependentUpon>BlogSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSayfalar\BlogSil.aspx.designer.cs">
+      <DependentUpon>BlogSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSayfalar\YeniBlog.aspx.cs">
+      <DependentUpon>YeniBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSayfalar\YeniBlog.aspx.designer.cs">
+      <DependentUpon>YeniBlog.aspx</DependentUpon>
     </Compile>
     <Compile Include="BlogDetay.aspx.cs">
       <DependentUpon>BlogDetay.aspx</DependentUpon>
