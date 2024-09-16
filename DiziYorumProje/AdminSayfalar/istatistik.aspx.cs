@@ -19,6 +19,9 @@ namespace DiziYorumProje.AdminSayfalar
 
             Label4.Text = db.TBLBLOG.Where(x => x.TBLTUR.TURAD == "Dizi").Count().ToString();
             Label5.Text = db.TBLBLOG.Where(x => x.TBLKATEGORI.KATEGORIAD == "Animasyon").Count().ToString();
+
+
+            Label6.Text = db.TBLBLOG.Where(x => x.BLOGID == (db.TBLYORUM.GroupBy(t => t.YORUMBLOG).OrderByDescending(y => y.Count()).Select(z => z.Key).FirstOrDefault())).Select(p => p.BLOGBASLIK).FirstOrDefault();
         }
     }
 }
