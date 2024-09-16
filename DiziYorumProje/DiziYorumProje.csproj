@@ -75,9 +75,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminSayfalar\BlogGuncelle.aspx" />
     <Content Include="AdminSayfalar\Bloglar.aspx" />
     <Content Include="AdminSayfalar\BlogSil.aspx" />
+    <Content Include="AdminSayfalar\istatistik.aspx" />
     <Content Include="AdminSayfalar\YeniBlog.aspx" />
+    <Content Include="AdminSayfalar\YorumGuncelle.aspx" />
+    <Content Include="AdminSayfalar\Yorumlar.aspx" />
+    <Content Include="AdminSayfalar\YorumSil.aspx" />
     <Content Include="BlogDetay.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Entity\Model1.Context.tt">
@@ -123,6 +128,13 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="AdminSayfalar\BlogGuncelle.aspx.cs">
+      <DependentUpon>BlogGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSayfalar\BlogGuncelle.aspx.designer.cs">
+      <DependentUpon>BlogGuncelle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminSayfalar\Bloglar.aspx.cs">
       <DependentUpon>Bloglar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,12 +149,40 @@
     <Compile Include="AdminSayfalar\BlogSil.aspx.designer.cs">
       <DependentUpon>BlogSil.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminSayfalar\istatistik.aspx.cs">
+      <DependentUpon>istatistik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSayfalar\istatistik.aspx.designer.cs">
+      <DependentUpon>istatistik.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminSayfalar\YeniBlog.aspx.cs">
       <DependentUpon>YeniBlog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminSayfalar\YeniBlog.aspx.designer.cs">
       <DependentUpon>YeniBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSayfalar\YorumGuncelle.aspx.cs">
+      <DependentUpon>YorumGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSayfalar\YorumGuncelle.aspx.designer.cs">
+      <DependentUpon>YorumGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSayfalar\Yorumlar.aspx.cs">
+      <DependentUpon>Yorumlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSayfalar\Yorumlar.aspx.designer.cs">
+      <DependentUpon>Yorumlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSayfalar\YorumSil.aspx.cs">
+      <DependentUpon>YorumSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSayfalar\YorumSil.aspx.designer.cs">
+      <DependentUpon>YorumSil.aspx</DependentUpon>
     </Compile>
     <Compile Include="BlogDetay.aspx.cs">
       <DependentUpon>BlogDetay.aspx</DependentUpon>
