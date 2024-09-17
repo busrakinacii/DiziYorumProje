@@ -4,7 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BlogDiziModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BlogDiziModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBLADMIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KULLANICI" Type="varchar" MaxLength="20" />
+          <Property Name="SIFRE" Type="varchar" MaxLength="10" />
+        </EntityType>
         <EntityType Name="TBLBLOG">
           <Key>
             <PropertyRef Name="BLOGID" />
@@ -96,6 +104,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="BlogDiziModelStoreContainer">
+          <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLBLOG" EntityType="Self.TBLBLOG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLHAKKIMIZDA" EntityType="Self.TBLHAKKIMIZDA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLILETISIM" EntityType="Self.TBLILETISIM" Schema="dbo" store:Type="Tables" />
@@ -115,8 +124,7 @@
             <End Role="TBLYORUM" EntitySet="TBLYORUM" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BlogDiziModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -235,7 +243,16 @@
             <End Role="TBLBLOG" EntitySet="TBLBLOG" />
             <End Role="TBLYORUM" EntitySet="TBLYORUM" />
           </AssociationSet>
+          <EntitySet Name="TBLADMIN" EntityType="BlogDiziModel.TBLADMIN" />
         </EntityContainer>
+        <EntityType Name="TBLADMIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KULLANICI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SIFRE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -299,6 +316,15 @@
                 <ScalarProperty Name="MAIL" ColumnName="MAIL" />
                 <ScalarProperty Name="YORUMICERIK" ColumnName="YORUMICERIK" />
                 <ScalarProperty Name="YORUMBLOG" ColumnName="YORUMBLOG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLADMIN">
+            <EntityTypeMapping TypeName="BlogDiziModel.TBLADMIN">
+              <MappingFragment StoreEntitySet="TBLADMIN">
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+                <ScalarProperty Name="KULLANICI" ColumnName="KULLANICI" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

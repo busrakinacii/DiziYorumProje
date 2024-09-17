@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DiziYorumProje.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.Master" AutoEventWireup="true" CodeBehind="KategoriDetay.aspx.cs" Inherits="DiziYorumProje.KategoriDetay" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -28,35 +28,12 @@
                     <ul>
                         <asp:Repeater ID="Repeater3" runat="server">
                             <ItemTemplate>
-                                <li><a href="BlogDetay.aspx?BLOGID=<%#Eval("BLOGID") %>"><%#Eval("BLOGBASLIK") %></li>
+                                <li><a href="BlogDetay.aspx?BLOGID=<%#Eval("BLOGID") %>"><%#Eval("BLOGBASLIK") %></a></li>
                             </ItemTemplate>
                         </asp:Repeater>
                     </ul>
                 </div>
-                <div class="categories">
-                    <h3>Kategoriler</h3>
-                    <ul>
-                        <asp:Repeater ID="Repeater2" runat="server">
-                            <ItemTemplate>
-                                <li><a href="KategoriDetay.aspx?KATEGORIID=<%#Eval("KATEGORIID") %>"><%#Eval("KATEGORIAD") %></a></li>
-                            </ItemTemplate>
-                        </asp:Repeater>
 
-                    </ul>
-                </div>
-                <br />
-
-                <div class="clearfix"></div>
-                <div class="archives">
-                    <h3>Arşivler</h3>
-                    <ul>
-                        <li><a href="#">OCAK 2024</a></li>
-                        <li><a href="#">ŞUBAT 2024</a></li>
-                        <li><a href="#">MAYIS 2024</a></li>
-                        <li><a href="#">HAZİRAN 2024</a></li>
-                    </ul>
-                </div>
-                 <div class="clearfix"></div>
                 <div class="comments">
                     <h3>Son Yorumlar</h3>
                     <asp:Repeater ID="Repeater4" runat="server">
@@ -68,6 +45,19 @@
                     </asp:Repeater>
                 </div>
 
+                <div class="clearfix"></div>
+
+                <div class="categories">
+                    <h3>Kategoriler</h3>
+                    <ul>
+                        <asp:Repeater ID="Repeater2" runat="server">
+                            <ItemTemplate>
+                                <li><a href="KategoriDetay.aspx?KATEGORIID=<%#Eval("KATEGORIID") %>"><%#Eval("KATEGORIAD") %></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+                    </ul>
+                </div>
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>

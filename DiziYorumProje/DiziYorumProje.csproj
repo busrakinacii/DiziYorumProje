@@ -97,8 +97,13 @@
     </Content>
     <Content Include="Hakkimda.aspx" />
     <Content Include="Iletisim.aspx" />
+    <Content Include="KategoriDetay.aspx" />
+    <Content Include="Login_Sayfa\Login.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
+    <Content Include="web2\css\style.css" />
+    <Content Include="web2\images\b1.jpg" />
+    <Content Include="web2\index.html" />
     <Content Include="web\about.html" />
     <Content Include="web\contact.html" />
     <Content Include="web\css\bootstrap.css" />
@@ -213,6 +218,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBLADMIN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBLBLOG.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -245,12 +253,26 @@
     <Compile Include="Iletisim.aspx.designer.cs">
       <DependentUpon>Iletisim.aspx</DependentUpon>
     </Compile>
+    <Compile Include="KategoriDetay.aspx.cs">
+      <DependentUpon>KategoriDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KategoriDetay.aspx.designer.cs">
+      <DependentUpon>KategoriDetay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Kullanici.Master.cs">
       <DependentUpon>Kullanici.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Kullanici.Master.designer.cs">
       <DependentUpon>Kullanici.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Sayfa\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_Sayfa\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

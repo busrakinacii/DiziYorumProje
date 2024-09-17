@@ -7,47 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DiziYorumProje
+namespace DiziYorumProje.Login_Sayfa
 {
 
 
-    public partial class Default
+    public partial class Login
     {
 
         /// <summary>
-        /// Repeater1 control.
+        /// TxtKullaniciAd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.TextBox TxtKullaniciAd;
 
         /// <summary>
-        /// Repeater3 control.
+        /// TxtSifre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater3;
+        protected global::System.Web.UI.WebControls.TextBox TxtSifre;
 
         /// <summary>
-        /// Repeater2 control.
+        /// BtnGiris control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater2;
-
-        /// <summary>
-        /// Repeater4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater4;
+        protected global::System.Web.UI.WebControls.Button BtnGiris;
     }
 }

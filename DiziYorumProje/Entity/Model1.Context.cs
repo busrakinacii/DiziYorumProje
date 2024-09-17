@@ -31,5 +31,6 @@ namespace DiziYorumProje.Entity
         public virtual DbSet<TBLKATEGORI> TBLKATEGORI { get; set; }
         public virtual DbSet<TBLTUR> TBLTUR { get; set; }
         public virtual DbSet<TBLYORUM> TBLYORUM { get; set; }
+        public virtual DbSet<TBLADMIN> TBLADMIN { get; set; }
     }
 }
